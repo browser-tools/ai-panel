@@ -32,9 +32,6 @@ export default function AIPanelLanding() {
               <a href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
                 How It Works
               </a>
-              <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-                Contact
-              </a>
             </nav>
           </div>
 
@@ -202,7 +199,20 @@ export default function AIPanelLanding() {
                   <CardTitle className="flex items-center gap-2">
                     <ArrowRight className="h-5 w-5 text-primary rotate-45" />
                     Resize & Hide Panel
-        <Footer />
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    Drag to resize the sidebar or collapse it completely to keep your browsing space uncluttered.
+                  </p>
+                </CardContent>
+              </Card>
+              
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Star className="h-5 w-5 text-primary" />
+
                     Quick Bookmark Access
                   </CardTitle>
                 </CardHeader>
