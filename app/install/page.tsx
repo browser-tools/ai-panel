@@ -13,6 +13,7 @@ import {
 } from "lucide-react"
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
+import { Footer } from "@/components/ui/footer"
 
 export default function InstallPage() {
   return (
@@ -22,9 +23,9 @@ export default function InstallPage() {
   <div className="container max-w-3xl flex h-16 items-center justify-between mx-auto">
           {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center relative">
-              <div className="h-5 w-3 bg-primary-foreground rounded-sm absolute right-1"></div>
-            </div>
+            <span className="block h-8 w-8 relative">
+              <img src="/images/icon4.svg" alt="AI Panel Icon" className="h-8 w-8" />
+            </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>
 
@@ -49,10 +50,12 @@ export default function InstallPage() {
             </div>
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance mb-6">
               Welcome to
-              <span className="text-primary"> AI Panel!</span>
+              <span className="text-primary"> AI Panel</span>
             </h1>
             <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
-              Thank you for installing AI Panel. Follow these quick steps to get started with privacy-first AI chat on
+              Thank you for installing AI Panel!
+              <br/>
+              Follow these quick steps to get started with privacy-first AI chat on
               any webpage.
             </p>
             <Badge variant="secondary" className="mb-8">
@@ -300,20 +303,7 @@ export default function InstallPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-muted/50">
-        <Container className="py-12 flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="h-6 w-6 rounded bg-primary flex items-center justify-center relative">
-              <div className="h-4 w-2 bg-primary-foreground rounded-sm absolute right-0.5"></div>
-            </div>
-            <span className="font-bold">AI Panel</span>
-          </div>
-          <p className="text-sm text-muted-foreground mb-8 text-center">Privacy-first AI chat on any webpage.</p>
-          <div className="border-t pt-8 w-full">
-            <p className="text-sm text-muted-foreground text-center">© 2024 AI Panel. All rights reserved.</p>
-          </div>
-        </Container>
-      </footer>
+    <Footer />
     </div>
   )
 }

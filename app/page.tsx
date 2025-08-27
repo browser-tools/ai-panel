@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Zap, Globe, Star, ArrowRight, Menu, MessageSquare, Lock } from "lucide-react"
 import { Container } from "@/components/ui/container"
+import { Footer } from "@/components/ui/footer"
+import { EXTENSION_INSTALL_URL } from "@/config"
 
 export default function AIPanelLanding() {
   return (
@@ -12,9 +14,9 @@ export default function AIPanelLanding() {
   <Container maxWidth="4xl" className="flex h-16 items-center justify-between">
           {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center relative">
-              <div className="h-5 w-3 bg-primary-foreground rounded-sm absolute right-1"></div>
-            </div>
+            <span className="block h-8 w-8 relative">
+              <img src="/images/icon4.svg" alt="AI Panel Icon" className="h-8 w-8" />
+            </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>
 
@@ -43,7 +45,7 @@ export default function AIPanelLanding() {
 
       {/* Hero Section */}
       <section className="py-20 md:py-32">
-  <Container maxWidth="4xl">
+        <Container maxWidth="4xl">
           <div className="mx-auto max-w-4xl text-center">
             <Badge variant="secondary" className="mb-6">
               🔒 Privacy-First AI Chat
@@ -57,24 +59,48 @@ export default function AIPanelLanding() {
               with complete privacy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Install Browser Extension
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                See Demo
+              <Button size="lg" className="text-lg px-8" asChild>
+                <a href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
+                  Install Browser Extension
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
               Works on any website • No registration required • Completely private
             </p>
           </div>
-  </Container>
+        </Container>
+      </section>
+
+      {/* See AI Panel in Action Section (moved up) */}
+      <section className="py-20 bg-muted/50">
+        <Container>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">See AI Panel in Action</h2>
+            <p className="text-xl text-muted-foreground">Watch how easy it is to get AI assistance on any webpage</p>
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/kKFf8kyz3g4?si=6nXgCXHDmEVSaRXo"
+                title="AI Panel Demo Video"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-4">
+              See how AI Panel integrates seamlessly with your browsing experience
+            </p>
+          </div>
+        </Container>
       </section>
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-muted/50">
-  <Container maxWidth="4xl">
+        <Container maxWidth="4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Privacy-first AI, everywhere you browse</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -176,20 +202,7 @@ export default function AIPanelLanding() {
                   <CardTitle className="flex items-center gap-2">
                     <ArrowRight className="h-5 w-5 text-primary rotate-45" />
                     Resize & Hide Panel
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Resize the panel to fit your screen perfectly. Easily hide it by clicking anywhere outside the
-                    panel.
-                  </p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Star className="h-5 w-5 text-primary" />
+        <Footer />
                     Quick Bookmark Access
                   </CardTitle>
                 </CardHeader>
@@ -313,12 +326,11 @@ export default function AIPanelLanding() {
               Join thousands of users who browse smarter without compromising their privacy
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8">
-                Install AI Panel
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent">
-                Learn More
+              <Button size="lg" className="text-lg px-8" asChild>
+                <a href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
+                  Install AI Panel
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">Free forever • No registration • Works everywhere</p>
@@ -326,21 +338,7 @@ export default function AIPanelLanding() {
   </Container>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t bg-muted/50">
-        <Container className="py-12 flex flex-col items-center justify-center">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="h-6 w-6 rounded bg-primary flex items-center justify-center relative">
-              <div className="h-4 w-2 bg-primary-foreground rounded-sm absolute right-0.5"></div>
-            </div>
-            <span className="font-bold">AI Panel</span>
-          </div>
-          <p className="text-sm text-muted-foreground mb-8 text-center">Privacy-first AI chat on any webpage.</p>
-          <div className="border-t pt-8 w-full">
-            <p className="text-sm text-muted-foreground text-center">© 2024 AI Panel. All rights reserved.</p>
-          </div>
-        </Container>
-      </footer>
+  <Footer />
     </div>
   )
 }
