@@ -1,0 +1,5 @@
+{
+  "presets": ["@gh-pages/preset-default"],
+  "branch": "gh-pages",
+  "repo": "https://github.com/browser-tools/ai-panel.git"
+}
