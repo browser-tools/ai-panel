@@ -18,7 +18,8 @@ export default function InstallPage() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+  <div className="container max-w-3xl flex h-16 items-center justify-between mx-auto">
+          {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center relative">
               <div className="h-5 w-3 bg-primary-foreground rounded-sm absolute right-1"></div>
@@ -26,6 +27,10 @@ export default function InstallPage() {
             <span className="text-xl font-bold">AI Panel</span>
           </div>
 
+          {/* Center: Empty for now, can add nav if needed */}
+          <div className="flex-1 flex justify-center"></div>
+
+          {/* Right: Back to Home button */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
               <a href="/">Back to Home</a>
@@ -36,7 +41,7 @@ export default function InstallPage() {
 
       {/* Success Hero Section */}
       <section className="py-20 md:py-32">
-        <div className="container">
+  <div className="container max-w-2xl mx-auto">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mx-auto h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
               <CheckCircle className="h-8 w-8 text-green-600" />
@@ -58,7 +63,7 @@ export default function InstallPage() {
 
       {/* Setup Steps */}
       <section className="py-20 bg-muted/50">
-        <div className="container">
+  <div className="container max-w-2xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Get Started in 3 Easy Steps</h2>
             <p className="text-xl text-muted-foreground">Complete these steps to unlock the full power of AI Panel</p>
@@ -223,7 +228,7 @@ export default function InstallPage() {
 
       {/* Ready to Use */}
       <section className="py-20">
-        <div className="container">
+  <div className="container max-w-2xl mx-auto">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">You're All Set!</h2>
             <p className="text-xl text-muted-foreground mb-8">

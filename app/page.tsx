@@ -2,13 +2,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Zap, Globe, Star, ArrowRight, Menu, MessageSquare, Lock } from "lucide-react"
+import { Container } from "@/components/ui/container"
 
 export default function AIPanelLanding() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center justify-between">
+  <Container maxWidth="4xl" className="flex h-16 items-center justify-between">
+          {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center relative">
               <div className="h-5 w-3 bg-primary-foreground rounded-sm absolute right-1"></div>
@@ -16,36 +18,32 @@ export default function AIPanelLanding() {
             <span className="text-xl font-bold">AI Panel</span>
           </div>
 
-          <nav className="hidden md:flex items-center space-x-6">
-            <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
-              Features
-            </a>
-            <a href="#privacy" className="text-sm font-medium hover:text-primary transition-colors">
-              Privacy
-            </a>
-            <a href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
-              How It Works
-            </a>
-            <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </a>
-          </nav>
-
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" className="hidden md:inline-flex">
-              Install Extension
-            </Button>
-            <Button>Get Started</Button>
-            <Button variant="ghost" size="icon" className="md:hidden">
-              <Menu className="h-5 w-5" />
-            </Button>
+          {/* Center: Nav */}
+          <div className="flex-1 flex justify-center">
+            <nav className="hidden md:flex items-center space-x-6">
+              <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
+                Features
+              </a>
+              <a href="#privacy" className="text-sm font-medium hover:text-primary transition-colors">
+                Privacy
+              </a>
+              <a href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+                How It Works
+              </a>
+              <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+                Contact
+              </a>
+            </nav>
           </div>
-        </div>
+
+          {/* Right: Empty for now, can add buttons if needed */}
+          <div className="w-32"></div>
+  </Container>
       </header>
 
       {/* Hero Section */}
       <section className="py-20 md:py-32">
-        <div className="container">
+  <Container maxWidth="4xl">
           <div className="mx-auto max-w-4xl text-center">
             <Badge variant="secondary" className="mb-6">
               🔒 Privacy-First AI Chat
@@ -71,12 +69,12 @@ export default function AIPanelLanding() {
               Works on any website • No registration required • Completely private
             </p>
           </div>
-        </div>
+  </Container>
       </section>
 
       {/* Features Section */}
       <section id="features" className="py-20 bg-muted/50">
-        <div className="container">
+  <Container maxWidth="4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Privacy-first AI, everywhere you browse</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -142,12 +140,12 @@ export default function AIPanelLanding() {
               </CardContent>
             </Card>
           </div>
-        </div>
+  </Container>
       </section>
 
       {/* How It Works Section */}
       <section id="how-it-works" className="py-20">
-        <div className="container">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Talk to AI in one click — without leaving a page</h2>
             <p className="text-xl text-muted-foreground">
@@ -277,12 +275,12 @@ export default function AIPanelLanding() {
               </div>
             </div>
           </div>
-        </div>
+  </Container>
       </section>
 
       {/* Demo Video Section */}
       <section className="py-20 bg-muted/50">
-        <div className="container">
+        <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">See AI Panel in Action</h2>
             <p className="text-xl text-muted-foreground">Watch how easy it is to get AI assistance on any webpage</p>
@@ -303,12 +301,12 @@ export default function AIPanelLanding() {
               See how AI Panel integrates seamlessly with your browsing experience
             </p>
           </div>
-        </div>
+  </Container>
       </section>
 
       {/* Final CTA Section */}
       <section className="py-20">
-        <div className="container">
+        <Container>
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready for privacy-first AI?</h2>
             <p className="text-xl text-muted-foreground mb-8">
@@ -325,12 +323,12 @@ export default function AIPanelLanding() {
             </div>
             <p className="text-sm text-muted-foreground mt-4">Free forever • No registration • Works everywhere</p>
           </div>
-        </div>
+  </Container>
       </section>
 
       {/* Footer */}
       <footer className="border-t bg-muted/50">
-        <div className="container py-12">
+        <Container className="py-12">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-2 mb-4">
               <div className="h-6 w-6 rounded bg-primary flex items-center justify-center relative">
@@ -344,7 +342,7 @@ export default function AIPanelLanding() {
               <p className="text-sm text-muted-foreground">© 2024 AI Panel. All rights reserved.</p>
             </div>
           </div>
-        </div>
+  </Container>
       </footer>
     </div>
   )
