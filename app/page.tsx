@@ -23,14 +23,14 @@ export default function AIPanelLanding() {
           {/* Center: Nav */}
           <div className="flex-1 flex justify-center">
             <nav className="hidden md:flex items-center space-x-6">
+              <a href="#demo" className="text-sm font-medium hover:text-primary transition-colors">
+                Demo
+              </a>
               <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
                 Features
               </a>
               <a href="#privacy" className="text-sm font-medium hover:text-primary transition-colors">
                 Privacy
-              </a>
-              <a href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
-                How It Works
               </a>
             </nav>
           </div>
@@ -71,7 +71,7 @@ export default function AIPanelLanding() {
       </section>
 
       {/* See AI Panel in Action Section (moved up) */}
-      <section className="py-20 bg-muted/50">
+      <section id="demo" className="py-20 bg-muted/50">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">See AI Panel in Action</h2>
@@ -95,79 +95,8 @@ export default function AIPanelLanding() {
         </Container>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-20 bg-muted/50">
-        <Container maxWidth="4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Privacy-first AI, everywhere you browse</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Powerful AI assistance without sacrificing your privacy or workflow
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Lock className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Zero Data Collection</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  No accounts, no tracking, no data stored on our servers. Your conversations stay completely private.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Globe className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Works Everywhere</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Compatible with any website. Research, shop, learn, or work - AI Panel adapts to your browsing.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <Zap className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Instant Access</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  No API keys to manage. No setup required. Install once and get AI assistance on every page you visit.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center">
-              <CardHeader>
-                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                  <MessageSquare className="h-6 w-6 text-primary" />
-                </div>
-                <CardTitle>Context Aware</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Ask questions about the current page, get summaries, or have general conversations - all in one
-                  sidebar.
-                </CardDescription>
-              </CardContent>
-            </Card>
-          </div>
-  </Container>
-      </section>
-
       {/* How It Works Section */}
-      <section id="how-it-works" className="py-20">
+      <section id="features" className="py-20">
         <Container>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Talk to AI in one click — without leaving a page</h2>
@@ -238,91 +167,76 @@ export default function AIPanelLanding() {
               </Card>
             </div>
 
-            {/* Privacy Features */}
-            <div className="bg-muted/50 rounded-lg p-8">
-              <h3 className="text-2xl font-bold mb-6 text-center">Privacy & Security Focus</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div className="flex items-start gap-3">
-                  <Lock className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">Direct AI Communication</p>
-                    <p className="text-sm text-muted-foreground">
-                      Talk directly to AI models without any intermediate servers
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">No Data Access</p>
-                    <p className="text-sm text-muted-foreground">Doesn't request access to your data on any website</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Zap className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">CSP Compatible</p>
-                    <p className="text-sm text-muted-foreground">Does not disable Content Security Policy</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <MessageSquare className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">Clean Interface</p>
-                    <p className="text-sm text-muted-foreground">
-                      No floating buttons on pages — just clean, native controls
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <Star className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">Zero Permissions</p>
-                    <p className="text-sm text-muted-foreground">
-                      No permissions required for installation or operation
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-3">
-                  <ArrowRight className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="font-semibold">Keyboard Shortcuts</p>
-                    <p className="text-sm text-muted-foreground">Some providers use CTRL+ENTER to send messages</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
   </Container>
       </section>
 
-      {/* Demo Video Section */}
-      <section className="py-20 bg-muted/50">
-        <Container>
+      {/* Privacy Section */}
+      <section id="privacy" className="py-20 bg-muted/50">
+        <Container maxWidth="4xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">See AI Panel in Action</h2>
-            <p className="text-xl text-muted-foreground">Watch how easy it is to get AI assistance on any webpage</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Privacy-first AI, everywhere you browse</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Powerful AI assistance without sacrificing your privacy or workflow
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="AI Panel Demo Video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <p className="text-center text-sm text-muted-foreground mt-4">
-              See how AI Panel integrates seamlessly with your browsing experience
-            </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Lock className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Zero Data Collection</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  No accounts, no tracking, no data stored on our servers. Your conversations stay completely private.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Zap className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Direct AI Access</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  No API keys to manage. No setup required. Install once and get AI assistance on every page you visit.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Star className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>Zero Permissions</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  No permissions required for installation or operation.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <div className="mx-auto h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <Globe className="h-6 w-6 text-primary" />
+                </div>
+                <CardTitle>CSP Compatible</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription>
+                  Does not disable Content Security Policy.
+                </CardDescription>
+              </CardContent>
+            </Card>
           </div>
   </Container>
       </section>
