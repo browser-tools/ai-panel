@@ -12,6 +12,7 @@ import {
   Badge as Edge,
 } from "lucide-react"
 import Image from "next/image"
+import { Container } from "@/components/ui/container"
 
 export default function InstallPage() {
   return (
@@ -300,21 +301,18 @@ export default function InstallPage() {
 
       {/* Footer */}
       <footer className="border-t bg-muted/50">
-        <div className="container py-12">
-          <div className="text-center">
-            <div className="flex items-center justify-center space-x-2 mb-4">
-              <div className="h-6 w-6 rounded bg-primary flex items-center justify-center relative">
-                <div className="h-4 w-2 bg-primary-foreground rounded-sm absolute right-0.5"></div>
-              </div>
-              <span className="font-bold">AI Panel</span>
+        <Container className="py-12 flex flex-col items-center justify-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            <div className="h-6 w-6 rounded bg-primary flex items-center justify-center relative">
+              <div className="h-4 w-2 bg-primary-foreground rounded-sm absolute right-0.5"></div>
             </div>
-            <p className="text-sm text-muted-foreground mb-8">Privacy-first AI chat on any webpage.</p>
-
-            <div className="border-t pt-8">
-              <p className="text-sm text-muted-foreground">© 2024 AI Panel. All rights reserved.</p>
-            </div>
+            <span className="font-bold">AI Panel</span>
           </div>
-        </div>
+          <p className="text-sm text-muted-foreground mb-8 text-center">Privacy-first AI chat on any webpage.</p>
+          <div className="border-t pt-8 w-full">
+            <p className="text-sm text-muted-foreground text-center">© 2024 AI Panel. All rights reserved.</p>
+          </div>
+        </Container>
       </footer>
     </div>
   )
