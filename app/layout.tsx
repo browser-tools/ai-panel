@@ -5,7 +5,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'AI Panel',
-  description: 'Privacy-first AI sidebar on any webpage',
+  description: 'Privacy-first AI sidebar on any webpage.',
 }
 
 export default function RootLayout({
