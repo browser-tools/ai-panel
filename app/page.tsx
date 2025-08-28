@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Zap, Globe, Star, ArrowRight, Menu, MessageSquare, Lock } from "lucide-react"
@@ -25,15 +26,15 @@ export default function AIPanelLanding() {
           {/* Center: Nav */}
           <div className="flex-1 flex justify-center">
             <nav className="hidden md:flex items-center space-x-6">
-              <a href="#demo" className="text-sm font-medium hover:text-primary transition-colors">
+              <Link href="#demo" className="text-sm font-medium hover:text-primary transition-colors">
                 Demo
-              </a>
-              <a href="#features" className="text-sm font-medium hover:text-primary transition-colors">
+              </Link>
+              <Link href="#features" className="text-sm font-medium hover:text-primary transition-colors">
                 Features
-              </a>
-              <a href="#privacy" className="text-sm font-medium hover:text-primary transition-colors">
+              </Link>
+              <Link href="#privacy" className="text-sm font-medium hover:text-primary transition-colors">
                 Privacy
-              </a>
+              </Link>
             </nav>
           </div>
 
@@ -59,10 +60,10 @@ export default function AIPanelLanding() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
-                <a href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
+                <Link href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
                   Install Browser Extension
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
@@ -253,10 +254,10 @@ export default function AIPanelLanding() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
-                <a href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
+                <Link href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
                   Install AI Panel
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </Button>
             </div>
             <p className="text-sm text-muted-foreground mt-4">Free forever • No registration • Works everywhere</p>

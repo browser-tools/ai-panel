@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
@@ -35,7 +36,7 @@ export default function InstallPage() {
           {/* Right: Back to Home button */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <a href="/">Back to Home</a>
+              <Link href="/">Back to Home</Link>
             </Button>
           </div>
         </div>
@@ -289,13 +290,13 @@ export default function InstallPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
-                <a href="/">
+                <Link href="/">
                   Start Using AI Panel
                   <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                </Link>
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
-                <a href="/#how-it-works">Learn More Features</a>
+                <Link href="/#how-it-works">Learn More Features</Link>
               </Button>
             </div>
           </div>
