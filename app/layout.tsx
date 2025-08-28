@@ -3,6 +3,7 @@ import { Geist } from 'next/font/google'
 import logoIcon from '@/images/icon4.svg'
 import FacebookPixel from '@/components/FacebookPixel';
 import './globals.css'
+import RedditPixel from '@/components/RedditPixel';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -24,8 +25,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.className}>
-      <body>
+      <head>
         <FacebookPixel />
+        <RedditPixel />
+      </head>
+      <body>
         {children}
       </body>
     </html>
