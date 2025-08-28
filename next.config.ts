@@ -10,9 +10,6 @@ const nextConfig: NextConfig= {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
   images: {
     unoptimized: true, // Optional: Use this if you're hosting images statically
   },

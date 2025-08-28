@@ -15,18 +15,22 @@ import {
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Footer } from "@/components/ui/footer"
-import imgPinExtension from '../../public/images/pin-extension.png'
+import logoIcon from '@/images/icon4.svg'
+import imgPin from '@/images/site-pin.png'
+import imgSelectModel from '@/images/site-select-model.png';
+import imgAddBookmark from '@/images/site-add-bookmark.png';
+import imgOpenPanel from '@/images/site-open-panel.png'
 
 export default function InstallPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-  <div className="container max-w-3xl flex h-16 items-center justify-between mx-auto">
+  <Container maxWidth="4xl" className="flex h-16 items-center justify-between">
           {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
             <span className="block h-8 w-8 relative">
-              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} />
+              <Image src={logoIcon} alt="AI Panel Icon" width={32} height={32} />
             </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>
@@ -40,7 +44,7 @@ export default function InstallPage() {
               <Link href="/">Back to Home</Link>
             </Button>
           </div>
-        </div>
+        </Container>
       </header>
 
       {/* Success Hero Section */}
@@ -50,13 +54,13 @@ export default function InstallPage() {
             <div className="mx-auto h-16 w-16 rounded-full bg-green-100 flex items-center justify-center mb-6">
               <CheckCircle className="h-8 w-8 text-green-600" />
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance mb-6">
-              Welcome to
-              <span className="text-primary"> AI Panel</span>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance mb-2">
+              Welcome to <span className="text-primary"> AI Panel</span>
             </h1>
+            <h2 className="text-2xl md:text-4xl tracking-tight text-balance mb-6">
+               Thank you for installing AI Panel!
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
-              Thank you for installing AI Panel!
-              <br/>
               Follow these quick steps to get started with privacy-first AI chat on
               any webpage.
             </p>
@@ -93,10 +97,10 @@ export default function InstallPage() {
               <CardContent className="pl-8">
                 <div className="mb-6">
                   <Image
-                    src={imgPinExtension}
+                    src={imgPin}
                     alt="Pin AI Panel extension to browser toolbar"
-                    width={800}
-                    height={450}
+                    // width={800}
+                    // height={450}
                     className="rounded-lg border shadow-sm"
                   />
                 </div>
@@ -110,7 +114,7 @@ export default function InstallPage() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
+                  {/* <div className="flex items-start gap-3">
                     <Firefox className="h-5 w-5 text-orange-500 mt-1 flex-shrink-0" />
                     <div>
                       <p className="font-semibold">Firefox</p>
@@ -118,7 +122,7 @@ export default function InstallPage() {
                         Right-click toolbar → Customize → Drag AI Panel to toolbar
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                   <div className="flex items-start gap-3">
                     <Edge className="h-5 w-5 text-blue-600 mt-1 flex-shrink-0" />
                     <div>
@@ -149,7 +153,7 @@ export default function InstallPage() {
               <CardContent className="pl-8">
                 <div className="mb-6">
                   <Image
-                    src="/images/select-ai-provider.png"
+                    src={imgSelectModel}
                     alt="Select AI provider in AI Panel options"
                     width={800}
                     height={450}
@@ -201,7 +205,7 @@ export default function InstallPage() {
               <CardContent className="pl-8">
                 <div className="mb-6">
                   <Image
-                    src="/images/add-to-bookmarks.png"
+                    src={imgAddBookmark}
                     alt="Add AI Panel to bookmarks bar"
                     width={800}
                     height={450}
@@ -243,7 +247,7 @@ export default function InstallPage() {
 
             <div className="mb-8">
               <Image
-                src="/images/open-ai-panel.png"
+                src={imgOpenPanel}
                 alt="AI Panel sidebar opened on a webpage"
                 width={800}
                 height={450}
@@ -289,17 +293,6 @@ export default function InstallPage() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-lg px-8" asChild>
-                <Link href="/">
-                  Start Using AI Panel
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
-                <Link href="/#how-it-works">Learn More Features</Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>

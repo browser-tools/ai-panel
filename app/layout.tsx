@@ -6,6 +6,7 @@ const geist = Geist({
   subsets: ['latin'],
 })
 
+// See: https://github.com/vercel/next.js/issues/56687#issuecomment-2688979151
 export const metadata: Metadata = {
   title: 'AI Panel',
   description: 'Privacy-first AI sidebar on any webpage.',

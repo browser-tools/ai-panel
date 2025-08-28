@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container"
 import { Footer } from "@/components/ui/footer"
 import { EXTENSION_INSTALL_URL } from "@/config"
 import Image from "next/image"
+import logoIcon from '@/images/icon4.svg'
 
 export default function AIPanelLanding() {
   return (
@@ -17,8 +18,7 @@ export default function AIPanelLanding() {
           {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
             <span className="block h-8 w-8 relative">
-              {/* Use Next.js Image for optimized image handling */}
-              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} />
+              <Image src={logoIcon} alt="AI Panel Icon" width={32} height={32} />
             </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>
@@ -50,10 +50,12 @@ export default function AIPanelLanding() {
             <Badge variant="secondary" className="mb-6">
               🔒 Privacy-First AI Chat
             </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance mb-6">
-              AI Chat on Any Webpage,
-              <span className="text-primary"> Zero Compromises</span>
+            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-balance text-primary">
+              AI Panel
             </h1>
+            <h2 className="text-3xl md:text-5xl tracking-tight text-balance mb-6">
+              AI Chat on Any Webpage
+            </h2>
             <p className="text-xl text-muted-foreground text-pretty mb-8 max-w-2xl mx-auto">
               No accounts. No API keys. No middle servers. Open the sidebar, ask your questions, and continue browsing
               with complete privacy.
@@ -61,7 +63,7 @@ export default function AIPanelLanding() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="text-lg px-8" asChild>
                 <Link href={EXTENSION_INSTALL_URL} target="_blank" rel="noopener noreferrer">
-                  Install Browser Extension
+                  Install AI Panel
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
