@@ -15,6 +15,7 @@ import {
 import Image from "next/image"
 import { Container } from "@/components/ui/container"
 import { Footer } from "@/components/ui/footer"
+import imgPinExtension from '../../public/images/pin-extension.png'
 
 export default function InstallPage() {
   return (
@@ -92,7 +93,7 @@ export default function InstallPage() {
               <CardContent className="pl-8">
                 <div className="mb-6">
                   <Image
-                    src="/images/pin-extension.png"
+                    src={imgPinExtension}
                     alt="Pin AI Panel extension to browser toolbar"
                     width={800}
                     height={450}

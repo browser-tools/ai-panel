@@ -1,6 +1,8 @@
 import type { NextConfig } from 'next'
 
-// basePath: https://github.com/vercel/next.js/discussions/34173#discussioncomment-5833611
+// basePath + images: 
+// - https://github.com/vercel/next.js/discussions/34173#discussioncomment-5833611
+// - https://github.com/vercel/next.js/issues/81259
 
 const nextConfig: NextConfig= {
   output: 'export',
