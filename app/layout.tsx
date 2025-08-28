@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import logoIcon from '@/images/icon4.svg'
+import FacebookPixel from '@/components/FacebookPixel';
 import './globals.css'
 
 const geist = Geist({
@@ -24,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={geist.className}>
       <body>
+        <FacebookPixel />
         {children}
       </body>
     </html>
