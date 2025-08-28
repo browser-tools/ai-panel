@@ -10,6 +10,12 @@ const geist = Geist({
 export const metadata: Metadata = {
   title: 'AI Panel',
   description: 'Privacy-first AI sidebar on any webpage.',
+  icons: [
+    { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/images/icon4-16.png' },
+    { rel: 'icon', type: 'image/png', sizes: '48x48', url: '/images/icon4-48.png' },
+    { rel: 'icon', type: 'image/png', sizes: '128x128', url: '/images/icon4-128.png' },
+    { rel: 'icon', type: 'image/svg+xml', url: '/images/icon4.svg' },
+  ],
 }
 
 export default function RootLayout({
@@ -19,12 +25,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.className}>
-      <head>
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/icon4-16.png" />
-        <link rel="icon" type="image/png" sizes="48x48" href="/images/icon4-48.png" />
-        <link rel="icon" type="image/png" sizes="128x128" href="/images/icon4-128.png" />
-        <link rel="icon" type="image/svg+xml" href="/images/icon4.svg" />
-      </head>
       <body>
         {children}
       </body>
