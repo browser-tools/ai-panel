@@ -41,7 +41,7 @@ export default function InstallPage() {
           {/* Right: Back to Home button */}
           <div className="flex items-center space-x-4">
             <Button variant="ghost" asChild>
-              <Link href="..">Back to Home</Link>
+              <Link href="/">Back to Home</Link>
             </Button>
           </div>
         </Container>

@@ -6,6 +6,9 @@ const nextConfig: NextConfig= {
   eslint: {
     ignoreDuringBuilds: process.env.NODE_ENV === 'development',
   },
+  // Added to fix console error
+  // See: https://github.com/vercel/next.js/issues/73427
+  trailingSlash: true,
   images: {
     unoptimized: true, // Optional: Use this if you're hosting images statically
   },

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
+import logoIcon from '@/images/icon4.svg'
 import './globals.css'
 
 const geist = Geist({
@@ -11,10 +12,7 @@ export const metadata: Metadata = {
   title: 'AI Panel',
   description: 'Privacy-first AI sidebar on any webpage.',
   icons: [
-    { rel: 'icon', type: 'image/png', sizes: '16x16', url: '/images/icon4-16.png' },
-    { rel: 'icon', type: 'image/png', sizes: '48x48', url: '/images/icon4-48.png' },
-    { rel: 'icon', type: 'image/png', sizes: '128x128', url: '/images/icon4-128.png' },
-    { rel: 'icon', type: 'image/svg+xml', url: '/images/icon4.svg' },
+    { rel: 'icon', type: 'image/svg+xml', url: logoIcon.src },
   ],
 }
 
