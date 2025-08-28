@@ -18,7 +18,7 @@ export default function AIPanelLanding() {
           <div className="flex items-center space-x-2">
             <span className="block h-8 w-8 relative">
               {/* Use Next.js Image for optimized image handling */}
-              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} className="h-8 w-8" />
+              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} />
             </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>
