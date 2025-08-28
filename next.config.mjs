@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/ai-panel',
+  basePath: process.env.GH_PAGES_DEPLOY ? '/ai-panel' : '',
   eslint: {
     ignoreDuringBuilds: true,
   },

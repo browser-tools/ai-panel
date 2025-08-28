@@ -7,7 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
-    "deploy": "pnpm run build && gh-pages -d out"
+    "deploy": "GH_PAGES_DEPLOY=1 pnpm run build && gh-pages -d out"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",

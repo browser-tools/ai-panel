@@ -5,6 +5,7 @@ import { Zap, Globe, Star, ArrowRight, Menu, MessageSquare, Lock } from "lucide-
 import { Container } from "@/components/ui/container"
 import { Footer } from "@/components/ui/footer"
 import { EXTENSION_INSTALL_URL } from "@/config"
+import Image from "next/image"
 
 export default function AIPanelLanding() {
   return (
@@ -15,7 +16,8 @@ export default function AIPanelLanding() {
           {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
             <span className="block h-8 w-8 relative">
-              <img src="/images/icon4.svg" alt="AI Panel Icon" className="h-8 w-8" />
+              {/* Use Next.js Image for optimized image handling */}
+              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} className="h-8 w-8" />
             </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>

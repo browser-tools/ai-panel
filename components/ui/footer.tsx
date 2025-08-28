@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container"
+import Image from "next/image"
 
 export function Footer() {
   return (
@@ -6,7 +7,7 @@ export function Footer() {
       <Container className="py-12 flex flex-col items-center justify-center">
         <div className="flex items-center justify-center space-x-2 mb-4">
           <span className="block h-6 w-6 relative">
-            <img src="/images/icon4.svg" alt="AI Panel Icon" className="h-6 w-6" />
+            <Image src="/images/icon4.svg" alt="AI Panel Icon" width={24} height={24} className="h-6 w-6" />
           </span>
           <span className="font-bold">AI Panel</span>
         </div>
