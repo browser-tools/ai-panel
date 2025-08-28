@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
+  basePath: '/ai-panel',
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,8 +11,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
-  basePath: '/ai-panel',
 }
 
 export default nextConfig
