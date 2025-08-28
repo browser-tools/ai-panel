@@ -26,7 +26,7 @@ export default function InstallPage() {
           {/* Left: Logo & Title */}
           <div className="flex items-center space-x-2">
             <span className="block h-8 w-8 relative">
-              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} className="h-8 w-8" />
+              <Image src="/images/icon4.svg" alt="AI Panel Icon" width={32} height={32} />
             </span>
             <span className="text-xl font-bold">AI Panel</span>
           </div>
