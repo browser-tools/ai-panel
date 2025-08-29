@@ -1,9 +1,10 @@
+import './globals.css'
 import type { Metadata } from 'next'
 import { Geist } from 'next/font/google'
 import logoIcon from '@/images/icon4.svg'
 import FacebookPixel from '@/components/FacebookPixel';
-import './globals.css'
 import RedditPixel from '@/components/RedditPixel';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const geist = Geist({
   subsets: ['latin'],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <head>
         <FacebookPixel />
         <RedditPixel />
+        <GoogleAnalytics />
       </head>
       <body>
         {children}
