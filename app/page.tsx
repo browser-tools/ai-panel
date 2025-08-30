@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Zap, Globe, Star, ArrowRight, Menu, MessageSquare, Lock } from "lucide-react"
 import { Container } from "@/components/ui/container"
 import { Footer } from "@/components/ui/footer"
-import { EXTENSION_INSTALL_URL } from "@/config"
+import { EXTENSION_INSTALL_URL, EXTENSION_YOUTUBE_URL } from "@/config"
 import Image from "next/image"
 import logoIcon from '@/images/icon4.svg'
 
@@ -86,7 +86,7 @@ export default function AIPanelLanding() {
             <div className="relative aspect-video rounded-lg overflow-hidden bg-muted">
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/kKFf8kyz3g4?si=6nXgCXHDmEVSaRXo"
+                src={EXTENSION_YOUTUBE_URL}
                 title="AI Panel Demo Video"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
